@@ -91,7 +91,7 @@ void printScreen(){
   
   lcd.print(points);
   lcd.setCursor(0,1);
-  lcd.print("points");
+  lcd.print("poeng");
   
   // 'new point is in place' sound effect
   if(points != last_points){
