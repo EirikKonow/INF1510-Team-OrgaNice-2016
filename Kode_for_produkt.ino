@@ -2,9 +2,12 @@
 #include <LiquidCrystal.h>
 
 LiquidCrystal lcd(2,3,4,5,6,7);
+
+// The blue led
 int ledBlue = 13;
+
+// The photoresitor
 int lightPin = 4;
-int resetBut = 12;
 
 // Button-style counting of light 
 boolean lastAdd = LOW;
@@ -83,7 +86,8 @@ void printScreen(){
       lcd.print(points);
       
       delay(40);
-    // falling sound effect
+      // falling sound effect
+      // not made with pitches to make the math clearer
       tone(8, 362 + (i*263/32), 50);
       lcd.clear();
     }
